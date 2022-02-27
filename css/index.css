@@ -1,0 +1,296 @@
+:root {
+    --bg-color: rgb(0, 188, 235);
+    --bg2-color: #006073;
+    --text-color: rgba(255, 255, 255, 0.9);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    height: 100%;
+    transition: background-color 1000ms linear;
+}
+
+#title {
+    text-align: center;
+    font-size: 2em;
+    padding: 1.5em;
+    color: var(--text-color)
+}
+
+main {
+    height: 100%;
+    background-color: var(--bg-color);
+    display: grid;
+    grid-template-rows: 30% 55% 10%;
+    place-items: center;
+    min-height: 100%
+}
+
+#card-index {
+    background-color: var(--text-color);
+    font-size: 2em;
+    text-align: center;
+    border-radius: 7px;
+}
+
+ul {
+    /* padding: 1em 0; */
+    border: 5px solid var(--text-color);
+    border-radius: 7px;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    color: var(--bg-color);
+    list-style: none;
+    font-weight: bold;
+    padding: 0 3em;
+    line-height: 4em;
+    border-radius: 7px;
+}
+
+li:hover {
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: all 200ms ease-in-out;
+}
+
+
+/* #contacts {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: var(--text-color);
+    padding: 10px;
+    width: 284px;
+    display: flex;
+} */
+
+
+/* Exam */
+
+#card-simulation {
+    min-height: 50%;
+    background-color: var(--text-color);
+    border-radius: 7px;
+    padding: 2em;
+    color: #006073;
+    position: relative;
+    padding-bottom: 4em;
+}
+
+#card-select {
+    /* min-width: 800px; */
+    display: grid;
+    grid-template-columns: 26% auto;
+    grid-template-rows: 1fr 1fr;
+    padding: 2em;
+    padding-bottom: 0;
+}
+
+#start-game {
+    color: var(--text-color);
+    text-align: center;
+    padding: 1em;
+    font-size: 1.3em;
+    background: var(--bg-color);
+    width: 200px;
+    border-radius: 7px;
+    position: absolute;
+    right: 1em;
+    bottom: 1em;
+}
+
+.btn-cont {
+    display: flex;
+}
+
+.btn-cont>input {
+    font-weight: bold;
+    color: var(--bg2-color);
+    min-width: 100px;
+    border: none;
+    background-color: transparent;
+}
+
+.titles {
+    font-size: 1.5em;
+    margin-right: 2em;
+}
+
+
+/* ABOUT */
+
+#card-about {
+    background-color: var(--text-color);
+    font-size: 1.5em;
+    text-align: center;
+    border-radius: 7px;
+    margin: 0 5em;
+    padding: 2em;
+    max-width: 850px;
+}
+
+#card-about h2 {
+    margin-bottom: 20px;
+}
+
+#card-about img {
+    width: 80px;
+}
+
+#contacts {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: 200px;
+}
+
+#contacts img {
+    width: 48px;
+}
+
+#icons-social {
+    display: flex;
+    width: 200px;
+    justify-content: space-around;
+}
+
+#socials {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em;
+    padding-bottom: 0;
+}
+
+hr {
+    margin: 30px 10px;
+}
+
+#back-div {
+    position: absolute;
+    bottom: 40px;
+    right: 40px;
+    border-radius: 50%;
+}
+
+.selected {
+    background-color: var(--bg-color)!important;
+    color: var(--text-color)!important;
+}
+
+#back-btn {
+    width: 70px;
+    color: #006073;
+    filter: invert(1);
+}
+
+#checkboxes {
+    padding: 3em;
+    padding-top: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    place-items: center;
+}
+
+.subbox {
+    text-align: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 70px;
+}
+
+hr {
+    height: 2px;
+    background-color: var(--bg-color);
+    border: none;
+}
+
+@media screen and (max-width: 1300px) {
+    #card-about {
+        font-size: 1em;
+        max-width: 600px;
+    }
+    #socials img {
+        width: 50px;
+    }
+    #socials {
+        padding: 1em;
+        padding-bottom: 0;
+    }
+    h2 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (max-width: 650px) {
+    #card-about hr {
+        margin: 10px;
+    }
+    #card-about {
+        margin: 0;
+        border-radius: 0;
+        padding: 2em 10px;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+    #title {
+        padding: 0;
+    }
+    #back-btn {
+        width: 60px;
+    }
+    #card-index li {
+        font-size: 0.8em;
+    }
+}
+
+@media screen and (max-width: 875px) {
+    main {
+        grid-template-rows: 20% 65% 10%;
+    }
+    #card-simulation {
+        padding: 10px;
+        padding-bottom: 64px;
+    }
+    h1 {
+        font-size: 1.3em;
+    }
+    #card-select {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .btn-cont {
+        height: 30px;
+        width: 100%;
+    }
+    .time-in {
+        width: 30px;
+    }
+    .btn-cont>input {
+        min-width: 70px;
+    }
+    #checkboxes {
+        padding: 0;
+        padding-bottom: 3em;
+    }
+    #back-btn {
+        width: 55px;
+    }
+}

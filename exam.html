@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="author" content="Loren Kociko">
+    <meta name="description" content="CCNA 200-301 Practice Exam">
+    <meta name="keywords" content="cisco, CCNA, EXAM, MOCK, questions, practice, answers, 200-301">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CCNA: Exam Simulation</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./css/exam.css">
+</head>
+
+<body>
+    <div id="overlay-outer">
+        <div id="overlay-inner">
+            <div id="resultDiv">Result: <span id="result"></span></div>
+            <div id="scoreDiv">Your score: <span id="score"></span></div>
+            <div id="result-text"></div>
+            <a id="back-div" href="index.html"><img id="back-btn" src="./Icons/back.png"></a>
+        </div>
+    </div>
+    <section id="blur-here">
+        <div id="fontBtns">
+            <label for="plusBtn">Font Size: </label>
+            <input type="button" id="plusBtn" class="fontBtn" value="+">
+            <input type="button" id="minusBtn" class="fontBtn" value="-">
+        </div>
+        <div id="exam-infos">
+            <div class="timer-group">
+                <div class="timer second">
+                    <div class="hand"><span></span></div>
+                    <div class="hand"><span></span></div>
+                </div>
+                <div class="face">
+                    <h2 id="question-number">0/0</h2>
+                    <p id="lazy">Unlimited</p>
+                </div>
+            </div>
+        </div>
+        <div style="position: absolute; top: 0; left: 0; padding: 10px;" onclick="toggler()">
+            <a href="#"><img id="modeicon" style="width: 60%;filter: invert(1);" src="./Icons/day.png"></a>
+        </div>
+
+        <h1>CCNA 200-301: Exam Simulation</h1>
+        <main>
+            <div id="questiondiv">
+                <div id="question">Please select a module you want to study</div>
+                <div id="answers"></div>
+                <div id="buttons">
+                    <input type="button" class="btns" id="nextBtn" value="Next">
+                </div>
+            </div>
+            <div id="numq"></div>
+        </main>
+    </section>
+    <script src="./scripts/questions.js"></script>
+    <script src="./scripts/exam.js"></script>
+</body>
+
+</html>
