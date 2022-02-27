@@ -10,7 +10,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CCNA: Pactice</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./index.css">
+    <link rel="stylesheet" href="./css/index.css">
 </head>
 
 <body>
@@ -171,7 +171,7 @@
             let checkboxesCollection = document.querySelectorAll(".checks")
             let selectedExams = []
             for (let i = 0; i < checkboxesCollection.length; i++) {
-                if (checkboxesCollection[i].value) {
+                if (checkboxesCollection[i].checked) {
                     selectedExams.push(checkboxesCollection[i].id)
                 }
             }
