@@ -8,31 +8,56 @@
     <meta name="keywords" content="cisco, CCNA, EXAM, MOCK, questions, practice, answers, 200-301">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CCNA Pactice</title>
+    <title>CCNA: Pactice</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./index.css">
 </head>
 
 <body>
-    <div id="fontBtns">
-        <label for="plusBtn">Font Size: </label>
-        <input type="button" id="plusBtn" class="fontBtn" value="+">
-        <input type="button" id="minusBtn" class="fontBtn" value="-">
-    </div>
-    <h1>CCNA 200-301 Practice</h1>
     <main>
-        <div id="questiondiv">
-            <div id="question">Please select a module you want to study</div>
-            <div id="answers"></div>
-            <div id="buttons">
-                <input type="button" class="btns" disabled="true" id="previousBtn" value="(<) Previous">
-                <input type="button" class="btns" disabled="true" id="checkBtn" value="Check (⎵)">
-                <input type="button" class="btns" disabled="true" id="nextBtn" value="Next (>)">
-            </div>
+        <div id="title">
+            <h1>CCNA: Practice</h1>
         </div>
-        <div id="menudiv">
-            <details id="det">
-                <summary>Modules</summary>
+        <div id="container">
+            <div id="card-index">
+                <ul>
+                    <a href="./casual.html">
+                        <li>
+                            Casual Study
+                        </li>
+                    </a>
+                    <a href="#" onclick="changeState('simu')">
+                        <li>
+                            EXAM Simulation
+                        </li>
+                    </a>
+                    <a href="#" onclick="changeState('about')">
+                        <li>
+                            <p>About me</p>
+                        </li>
+                    </a>
+                </ul>
+            </div>
+            <div id="card-simulation">
+                <div id="card-select">
+                    <div class="titles">Time:</div>
+                    <div id="time-cont" class="btn-cont">
+                        <input type="button" value="30'" class="time-in" id="time-30">
+                        <input type="button" value="60'" class="time-in" id="time-60">
+                        <input type="button" value="90'" class="time-in" id="time-90">
+                        <input type="button" value="150'" class="time-in selected" id="time-150">
+                        <input type="button" value="Unlimited" class="time-in" id="time-unlimited">
+                    </div>
+                    <div class="titles">Questions:</div>
+                    <div id="question-cont" class="btn-cont">
+                        <input type="button" value="30" class="question-in" id="question-30">
+                        <input type="button" value="60" class="question-in" id="question-60">
+                        <input type="button" value="100" class="question-in selected" id="question-100">
+                        <input type="button" value="200" class="question-in" id="question-200">
+                        <input type="button" value="All" class="question-in" id="question-all">
+                    </div>
+                </div>
+                <hr>
                 <div id="checkboxes">
                     <div>
                         <h3>Module 1</h3>
@@ -44,76 +69,157 @@
                         <h3>Module 3</h3>
                     </div>
                     <div class="subbox">
-                        <input type="checkbox" id="m1c1t3" class="checks">
+                        <input type="checkbox" id="m1c1t3" class="checks" checked>
                         <label>1-3</label>
                     </div>
                     <div class="subbox">
-                        <input type="checkbox" id="m2c1t4" class="checks">
+                        <input type="checkbox" id="m2c1t4" class="checks" checked>
                         <label>1-4</label>
                     </div>
                     <div class="subbox">
-                        <input type="checkbox" id="m3c1t2" class="checks">
+                        <input type="checkbox" id="m3c1t2" class="checks" checked>
                         <label>1-2</label>
                     </div>
                     <div class="subbox">
-                        <input type="checkbox" id="m1c4t7" class="checks">
+                        <input type="checkbox" id="m1c4t7" class="checks" checked>
                         <label>4-7</label>
                     </div>
                     <div class="subbox">
-                        <input type="checkbox" id="m2c5t6" class="checks">
+                        <input type="checkbox" id="m2c5t6" class="checks" checked>
                         <label>5-6</label>
                     </div>
                     <div class="subbox">
-                        <input type="checkbox" id="m3c3t5" class="checks">
+                        <input type="checkbox" id="m3c3t5" class="checks" checked>
                         <label>3-5</label>
                     </div>
                     <div class="subbox">
-                        <input type="checkbox" id="m1c8t10" class="checks">
+                        <input type="checkbox" id="m1c8t10" class="checks" checked>
                         <label>8-10</label>
                     </div>
                     <div class="subbox">
-                        <input type="checkbox" id="m2c7t9" class="checks">
+                        <input type="checkbox" id="m2c7t9" class="checks" checked>
                         <label>7-9</label>
                     </div>
                     <div class="subbox">
-                        <input type="checkbox" id="m3c6t8" class="checks">
+                        <input type="checkbox" id="m3c6t8" class="checks" checked>
                         <label>6-8</label>
                     </div>
                     <div class="subbox">
-                        <input type="checkbox" id="m1c11t13" class="checks">
+                        <input type="checkbox" id="m1c11t13" class="checks" checked>
                         <label>11-13</label>
                     </div>
                     <div class="subbox">
-                        <input type="checkbox" id="m2c10t13" class="checks">
+                        <input type="checkbox" id="m2c10t13" class="checks" checked>
                         <label>10-13</label>
                     </div>
                     <div class="subbox">
-                        <input type="checkbox" id="m3c9t12" class="checks">
+                        <input type="checkbox" id="m3c9t12" class="checks" checked>
                         <label>9-12</label>
                     </div>
                     <div class="subbox">
-                        <input type="checkbox" id="m1c14t15" class="checks">
+                        <input type="checkbox" id="m1c14t15" class="checks" checked>
                         <label>14-15</label>
                     </div>
                     <div class="subbox">
-                        <input type="checkbox" id="m2c14t16" class="checks">
+                        <input type="checkbox" id="m2c14t16" class="checks" checked>
                         <label>14-16</label>
                     </div>
                     <div class="subbox">
-                        <input type="checkbox" id="m3c13t14" class="checks">
+                        <input type="checkbox" id="m3c13t14" class="checks" checked>
                         <label>13-14</label>
                     </div>
                     <div class="subbox">
-                        <input type="checkbox" id="m1c16t17" class="checks">
+                        <input type="checkbox" id="m1c16t17" class="checks" checked>
                         <label>16-17</label>
                     </div>
                 </div>
-            </details>
+
+                <a id="start-game" href="#" onclick="startExam()">Start Exam</a>
+            </div>
+            <div id="card-about">
+                <h2>CCNA: Practice</h2>
+                <hr>
+                <p>To help me with my CCNA 200-301 studies, I created this web-application. It was created with using native HTML/CSS/JS. It includes most of the questions from the CCNA module exams. My goal was to create a clean and fast interface, with
+                    the option to combine different module, randomized questions and instant feedback.</p>
+                <hr>
+                <h3>Created by: Loren Kociko</h3>
+                <div id="socials">
+                    <a href="https://www.linkedin.com/in/loren-kociko/" target="_blank"><img src="./icons/in.png" class="icons" alt="Linkedin Icon"></a>
+                    <a href="https://github.com/LorenKociko" target="_blank"><img src="./icons/github.png" class="icons" alt="GitHub Icon"></a>
+                    <a href="https://lorenkociko.com/" target="_blank"><img src="./icons/web.png" class="icons" alt="Website Icon"></a>
+                </div>
+            </div>
         </div>
-        <div id="numq"></div>
     </main>
-    <script src="./questions.js"></script>
-    <script src="./code.js">
+    <a id="back-div" href="#" onclick="changeState('main')"><img id="back-btn" src="./Icons/back.png"></a>
+    <div id="contacts">
+        <h4 style="padding-bottom: 10px;">Created by: Loren Kociko </h4>
+        <div id="icons-social">
+            <a href="https://www.linkedin.com/in/loren-kociko/" target="_blank" class="icons"><img src="./icons/in.png" class="icons" alt="Linkedin Icon"></a>
+            <a href="https://github.com/LorenKociko" target="_blank" class="icons"><img src="./icons/github.png" class="icons" alt="GitHub Icon"></a>
+            <a href="https://lorenkociko.com/" target="_blank" class="icons"><img src="./icons/web.png" class="icons" alt="Website Icon"></a>
+        </div>
+    </div>
+    <script>
+        changeState('main')
+
+        function startExam() {
+            let timeQuestions = document.querySelectorAll(".selected")
+            let storedData = {}
+            storedData.time = timeQuestions[0].value
+            storedData.questions = timeQuestions[1].value
+            let checkboxesCollection = document.querySelectorAll(".checks")
+            let selectedExams = []
+            for (let i = 0; i < checkboxesCollection.length; i++) {
+                if (checkboxesCollection[i].value) {
+                    selectedExams.push(checkboxesCollection[i].id)
+                }
+            }
+            storedData.selectedExams = selectedExams
+            localStorage.setItem('exam', JSON.stringify(storedData));
+            window.location.href = "./exam.html";
+        }
+
+
+        function changeState(state) {
+            if (state === "main") {
+                document.getElementById("card-index").style.display = "block"
+                document.getElementById("card-simulation").style.display = "none"
+                document.getElementById("card-about").style.display = "none"
+                document.getElementById("back-btn").style.display = "none"
+            } else if (state === "simu") {
+                document.getElementById("card-index").style.display = "none"
+                document.getElementById("card-simulation").style.display = "grid"
+                document.getElementById("card-about").style.display = "none"
+                document.getElementById("back-btn").style.display = "block"
+            } else if (state === "about") {
+                document.getElementById("card-index").style.display = "none"
+                document.getElementById("card-simulation").style.display = "none"
+                document.getElementById("card-about").style.display = "block"
+                document.getElementById("back-btn").style.display = "block"
+            }
+        }
+
+        const allTimeInputs = document.querySelectorAll(".time-in")
+        const allQuestionInputs = document.querySelectorAll(".question-in")
+        for (let i = 0; i < allTimeInputs.length; i++) {
+            allTimeInputs[i].addEventListener("click", () => {
+                resetSelected(allTimeInputs)
+                allTimeInputs[i].classList.add("selected")
+            });
+        }
+        for (let i = 0; i < allQuestionInputs.length; i++) {
+            allQuestionInputs[i].addEventListener("click", () => {
+                resetSelected(allQuestionInputs)
+                allQuestionInputs[i].classList.add("selected")
+            });
+        }
+
+        function resetSelected(list) {
+            for (let i = 0; i < list.length; i++) {
+                list[i].classList.remove("selected")
+            }
+        }
     </script>
 </body>
 
