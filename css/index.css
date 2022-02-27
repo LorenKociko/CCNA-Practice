@@ -261,10 +261,36 @@ hr {
 }
 
 @media screen and (max-width: 875px) {
+    main {
+        grid-template-rows: 20% 65% 10%;
+    }
     #card-simulation {
-        margin-top: -100px;
+        padding: 10px;
+        padding-bottom: 64px;
     }
     h1 {
         font-size: 1.3em;
+    }
+    #card-select {
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+    }
+    .btn-cont {
+        height: 30px;
+        width: 100%;
+    }
+    .time-in {
+        width: 30px;
+    }
+    .btn-cont>input {
+        min-width: 70px;
+    }
+    #checkboxes {
+        padding: 0;
+        padding-bottom: 3em;
+    }
+    #back-btn {
+        width: 55px;
     }
 }

@@ -11,7 +11,7 @@ let parameters = loadLocalStorage()
 
 // start hooks
 const questionDiv = document.getElementById("questiondiv")
-questionDiv.style.fontSize = '1.80em'
+questionDiv.style.fontSize = '1.45em'
 const questionArea = document.getElementById("question")
 const answersArea = document.getElementById("answers")
 const nextBtn = document.getElementById("nextBtn")
